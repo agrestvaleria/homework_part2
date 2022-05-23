@@ -3,6 +3,7 @@ from selenium import webdriver
 import pytest
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import allure
 
 
 @pytest.fixture(scope='class')
@@ -24,6 +25,9 @@ def web_driver():
 
 class TestGoogle:
 
+    @allure.feature('Test')
+    @allure.story('Check url')
     def test_url(self, web_driver):
-        current_url = web_driver.current_url
-        assert current_url == "https://www.google.com/"
+        with allure.step('Find current url'):
+            current_url = web_driver.current_url
+            assert current_url == "https://www.google.com/"
