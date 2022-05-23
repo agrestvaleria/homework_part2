@@ -17,9 +17,10 @@ def web_driver():
     # options.add_argument("--disable-dev-shm-usage")
     # options.add_argument("--no-sandbox")
     # options.add_argument('--headless')
-    # options.binary_location = "/usr/bin/chromium-browser"
+    #  options.binary_location = "/usr/bin/chromium-browser"
     #
     options = Options()
+    options.binary_location = "/usr/bin/google-chrome-stable"
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     # options.add_argument("--disable-gpu")
@@ -32,7 +33,7 @@ def web_driver():
     # options.add_argument(f"--data-path={mkdtemp()}")
     # options.add_argument(f"--disk-cache-dir={mkdtemp()}")
     options.add_argument("--remote-debugging-port=9222")
-    driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+    driver = webdriver.Chrome("/usr/bin/chromedriver", options=options, service_args=["--log-path=/home/valerya/PycharmProjects/qc1.log"])
     # driver = webdriver.Chrome( options=options, service_args=["--verbose", "--log-path=/home/valerya/PycharmProjects/qc1.log"])
     driver.maximize_window()
     driver.get("https://www.google.com/")
