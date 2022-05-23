@@ -4,7 +4,7 @@ import os
 
 @pytest.fixture(scope='session')
 def web_driver():
-    file = os.path.abspath("/home/valerya/PycharmProjects/My_homework/tests/tests_j/chromedriver")
+    file = os.path.abspath("chromedriver")
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
