@@ -1,15 +1,25 @@
 from selenium import webdriver
 import pytest
+import os
 
 @pytest.fixture(scope='session')
 def web_driver():
+    file = os.path.abspath("/usr/bin/chromedriver")
     options = webdriver.ChromeOptions()
-    options.add_argument('--no-sandbox')
     options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument("–-disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--remote-debugging-port=9222")
-    driver = webdriver.Chrome(executable_path="chromedriver", chrome_options=options)
+    options.add_argument("--disable-setuid-sandbox")
+    driver = webdriver.Chrome(chrome_options=options, executable_path=file)
+
+    # options = webdriver.ChromeOptions()
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--headless')
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--remote-debugging-port=9222")
+    # driver = webdriver.Chrome(executable_path="chromedriver", chrome_options=options)
     driver.maximize_window()
     driver.get("https://www.google.com/")
     driver.implicitly_wait(10)
