@@ -10,7 +10,7 @@ def web_driver():
     options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-setuid-sandbox")
-    driver = webdriver.Chrome(chrome_options=options, executable_path='chromedriver')
+    driver = webdriver.Chrome(chrome_options=options)
 
     # options = webdriver.ChromeOptions()
     # options.add_argument('--no-sandbox')
