@@ -6,19 +6,6 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope='session')
 def web_driver():
-    # options = Options()
-    # options.add_argument('--no-sandbox')
-    # options.add_argument('--headless')
-    # options.add_argument('--disable-dev-shm-usage')
-
-    # options.add_argument("start-maximized")
-    # options.add_argument("disable-infobars")
-    # options.add_argument("--disable-extensions")
-    # options.add_argument("--disable-dev-shm-usage")
-    # options.add_argument("--no-sandbox")
-    # options.add_argument('--headless')
-    #  options.binary_location = "/usr/bin/chromium-browser"
-    #
     options = Options()
     options.binary_location = "/usr/bin/google-chrome-stable"
     options.add_argument('--headless')
