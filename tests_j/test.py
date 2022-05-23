@@ -4,11 +4,12 @@ import os
 
 @pytest.fixture(scope='session')
 def web_driver():
-    file = os.path.abspath("/usr/bin/chromedriver")
+    file = os.path.abspath("/home/valerya/PycharmProjects/My_homework/tests/tests_j/chromedriver")
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument("–-disable-dev-shm-usage")
+    options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-setuid-sandbox")
     driver = webdriver.Chrome(chrome_options=options, executable_path=file)
