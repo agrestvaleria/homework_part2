@@ -1,8 +1,8 @@
 from selenium import webdriver
 import pytest
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from tempfile import mkdtemp
+# from selenium.webdriver.chrome.service import Service
+# from tempfile import mkdtemp
 
 @pytest.fixture(scope='session')
 def web_driver():
@@ -25,13 +25,13 @@ def web_driver():
     # options.add_argument("--disable-gpu")
     # options.add_argument("--window-size=1280x1696")
     # options.add_argument("--single-process")
-    # options.add_argument("--disable-dev-shm-usage")
-    # options.add_argument("--disable-dev-tools")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-dev-tools")
     # options.add_argument("--no-zygote")
     # options.add_argument(f"--user-data-dir={mkdtemp()}")
     # options.add_argument(f"--data-path={mkdtemp()}")
     # options.add_argument(f"--disk-cache-dir={mkdtemp()}")
-    # options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--remote-debugging-port=9222")
     driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
     # driver = webdriver.Chrome( options=options, service_args=["--verbose", "--log-path=/home/valerya/PycharmProjects/qc1.log"])
     driver.maximize_window()
