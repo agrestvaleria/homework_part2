@@ -1,6 +1,0 @@
-url = 'http://the-internet.herokuapp.com/dynamic_controls'
-checkbox_site = '//input[@type="checkbox"]'
-remove_site = '//*[@id="checkbox-example"]/button'
-message_site = 'message'
-input_site = '//input[@type="text"]'
-enable_site = '//*[@id ="input-example"]/button'
