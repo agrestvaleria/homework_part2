@@ -11,14 +11,14 @@ try:
     print("Connection to MySQL DB successful")
 
     try:
-        # # Create table orders
+        # Create table orders
         with db.cursor() as cursor:
             create_table_query = "CREATE TABLE orders (ord_no INT(5), " \
                                  "purch_amt FLOAT, ord_date DATE, " \
                                  "customer_id INT(4), salesman_id INT(4))"
             cursor.execute(create_table_query)
             print("Table orders created successfully")
-        # # Insert data
+        # Insert data
         with db.cursor() as cursor:
             insert_query = "INSERT INTO orders (ord_no, purch_amt, ord_date," \
                            "customer_id, salesman_id) " \
@@ -56,7 +56,7 @@ try:
             query = "SELECT ord_date, customer_id, ord_no, purch_amt " \
                     "FROM orders ORDER BY ord_date"
             cursor.execute(query)
-            print("Orders sorted be data:\n", cursor.fetchall())
+            print("Orders sorted by data:\n", cursor.fetchall())
         # Orders 70000-70007
         with db.cursor() as cursor:
             query = "SELECT * FROM orders WHERE ord_no BETWEEN 70000 AND 70007"
