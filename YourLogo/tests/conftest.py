@@ -3,12 +3,17 @@ from selenium import webdriver
 from tests.YourLogo.pages.Login_page import LoginPage
 from tests.YourLogo.pages.Main_page import MainPage
 from tests.YourLogo.pages.Cart_page import CartPage
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture(scope="class")
 def browser():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
 
