@@ -1,7 +1,7 @@
-from YourLogo.pages.Login_page import LoginPage
-from YourLogo.configs.config_parser import email_true, password_true
-from YourLogo.configs.config_parser import account_info, password_false
-from YourLogo.configs.config_parser import error_text
+from tests.YourLogo.pages.Login_page import LoginPage
+from tests.YourLogo.configs.config_parser import email_true, password_true
+from tests.YourLogo.configs.config_parser import account_info, password_false
+from tests.YourLogo.configs.config_parser import error_text
 
 
 class TestLoginPage:

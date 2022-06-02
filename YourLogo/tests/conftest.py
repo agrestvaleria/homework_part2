@@ -1,8 +1,8 @@
 import pytest
 from selenium import webdriver
-from YourLogo.pages.Login_page import LoginPage
-from YourLogo.pages.Main_page import MainPage
-from YourLogo.pages.Cart_page import CartPage
+from tests.YourLogo.pages.Login_page import LoginPage
+from tests.YourLogo.pages.Main_page import MainPage
+from tests.YourLogo.pages.Cart_page import CartPage
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import warnings

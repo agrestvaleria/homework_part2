@@ -1,5 +1,5 @@
-from YourLogo.pages.Cart_page import CartPage
-from YourLogo.configs.config_parser import cart_empty, quantity
+from tests.YourLogo.pages.Cart_page import CartPage
+from tests.YourLogo.configs.config_parser import cart_empty, quantity
 
 
 class TestCartPage:

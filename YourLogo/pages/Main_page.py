@@ -1,6 +1,6 @@
-from YourLogo.pages.Base_page import BasePage
-from YourLogo.locators.Main_page_locators import MainPageLocators
-from YourLogo.configs.config_parser import search_bar
+from tests.YourLogo.pages.Base_page import BasePage
+from tests.YourLogo.locators.Main_page_locators import MainPageLocators
+from tests.YourLogo.configs.config_parser import search_bar
 
 
 class MainPage(BasePage):

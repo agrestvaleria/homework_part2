@@ -2,7 +2,7 @@ import configparser
 
 
 config = configparser.ConfigParser()
-config.read('/YourLogo/configs/config.ini')
+config.read('YourLogo/configs/config.ini')
 
 email_true = config.get("login_info", "email")
 password_true = config.get("login_info", "password")
