@@ -2,8 +2,7 @@ import configparser
 
 
 config = configparser.ConfigParser()
-config.read('/home/valerya/PycharmProjects/My_homework/tests/YourLogo/configs'
-            '/config.ini')
+config.read('/YourLogo/configs/config.ini')
 
 email_true = config.get("login_info", "email")
 password_true = config.get("login_info", "password")

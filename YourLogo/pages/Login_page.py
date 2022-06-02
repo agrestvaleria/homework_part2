@@ -1,5 +1,5 @@
-from tests.YourLogo.locators.Login_page_locators import LoginPageLocators
-from tests.YourLogo.pages.Base_page import BasePage
+from YourLogo.locators.Login_page_locators import LoginPageLocators
+from YourLogo.pages.Base_page import BasePage
 
 
 class LoginPage(BasePage):

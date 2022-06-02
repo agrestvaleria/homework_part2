@@ -1,5 +1,5 @@
-from tests.YourLogo.pages.Base_page import BasePage
-from tests.YourLogo.locators.Cart_page_locators import CartPageLocators
+from YourLogo.pages.Base_page import BasePage
+from YourLogo.locators.Cart_page_locators import CartPageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
