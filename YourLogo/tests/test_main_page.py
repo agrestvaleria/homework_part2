@@ -1,5 +1,5 @@
-from tests.YourLogo.pages.Main_page import MainPage
-from tests.YourLogo.configs.config_parser import search_string, tabs_names
+from YourLogo.pages.Main_page import MainPage
+from YourLogo.configs.config_parser import search_string, tabs_names
 
 
 class TestMainPage:
