@@ -4,6 +4,8 @@ from tests.YourLogo.pages.Login_page import LoginPage
 from tests.YourLogo.pages.Main_page import MainPage
 from tests.YourLogo.pages.Cart_page import CartPage
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+import warnings
 
 
 @pytest.fixture(scope="class")
@@ -12,7 +14,9 @@ def browser():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-gpu')
-    driver = webdriver.Chrome(options=chrome_options)
+    warnings.filterwarnings("ignore", category=DeprecationWarning)
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(),
+                              options=chrome_options)
     driver.set_window_size(1920, 1080)
     yield driver
     driver.quit()
