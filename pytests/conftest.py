@@ -1,7 +1,7 @@
 import pytest
 from School.school_py import *
-from lesson_21.task_2_info import *
-from lesson_21.task_1_info import *
+from beginning_of_selenium_webdriver.task_2_info import *
+from beginning_of_selenium_webdriver.task_1_info import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select

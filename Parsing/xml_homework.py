@@ -1,3 +1,6 @@
+# Разработайте поиск книги в библиотеке по ее автору(часть имени)
+# /цене/заголовку/описанию.
+
 import xml.etree.ElementTree as ET
 
 tree = ET.parse("xml.xml")

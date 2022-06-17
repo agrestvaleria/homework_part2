@@ -1,3 +1,17 @@
+#     1. Создать новый проект SauceDemo
+#     2. Для следующего приложения: https://www.saucedemo.com/.
+#     3. Необходимо найти все локаторы для функциональных элементов,
+#     т.е. иконки, кнопки, поля ввода и т.д.
+#         a. По сути вы должны иметь просто текстовый файл с записями в стиле:
+#             i. By.id(“some_id”)
+#             ii. By.xpath(“some_xpath”)
+#         b. Назвать текстовый файл SauceDemoLocators.txt, разместить в папке
+#         src/test/resources (* можно внутри теста с помощью driver.find_element())
+#         c. Нужно найти локаторы для окна Login
+#         d. Залогиниться и найти все элементы в каталоге
+#         e. *Вывести в лог название товара и его стоимость, с помощью Logging Python
+
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By

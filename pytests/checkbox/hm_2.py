@@ -1,3 +1,13 @@
+#         i. Найти чекбокс на сайте http://the-internet.herokuapp.com/dynamic_controls
+#         ii. Нажать на кнопку
+#         iii. Дождаться надписи “It’s gone”
+#         iv. Проверить, что чекбокса нет
+#         v. Найти инпут
+#         vi. Проверить, что он disabled
+#         vii. Нажать на кнопку
+#         viii. Дождаться надписи “It's enabled!”
+#         ix. Проверить, что инпут enabled
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By

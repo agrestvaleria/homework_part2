@@ -1,3 +1,9 @@
+#     1. Открыть сайт http://demo.guru99.com/test/newtours/register.php
+#     2. Заполнить все поля
+#     3. Нажать кнопку Submit
+#     4. Проверить, что отображается правильно имя и фамилия
+#     5. Проверить, что отображается правильно username
+
 from selenium.webdriver.common.by import By
 from task_2_info import *
 

@@ -1,3 +1,9 @@
+# 1. Открыйть сайт http://automationpractice.com/index.php
+# 2. Ввести имя в поле username
+# 3. Ввести пароль в поле password
+# 4. Нажать на кнопку Login
+# 5. Проверить, что Login был успешен
+
 from selenium.webdriver.common.by import By
 from task_1_info import *
 
